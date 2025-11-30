@@ -31,8 +31,6 @@ export function ParentDashboardContent({
   onGoToTuition: () => void;
   onGoToChildren: () => void;
 }) {
-  // 🎨 SỬA: Xóa setTheme vì không sử dụng
-  const { resolvedTheme } = useTheme();
   return (
     <div className="space-y-8">
       {/* Hero / quick summary */}
