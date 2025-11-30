@@ -63,6 +63,7 @@
     "react-hook-form": "^7.60.0",
     "react-hot-toast": "^2.6.0",
     "react-resizable-panels": "^2.1.7",
+    "react-router-dom": "^7.9.6",
     "recharts": "2.15.4",
     "sass": "latest",
     "sass-embedded": "latest",
