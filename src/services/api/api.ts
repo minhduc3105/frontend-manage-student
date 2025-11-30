@@ -1,6 +1,5 @@
 // src/services/api.ts
 import axios from "axios";
-import type { AxiosRequestHeaders } from "axios";
 
 const BASE_HOST =
   process.env.NEXT_PUBLIC_API_URL || "https://api.dbdb-team.site";
