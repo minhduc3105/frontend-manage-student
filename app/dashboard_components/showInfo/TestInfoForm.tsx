@@ -11,23 +11,27 @@ interface TestInfoFormProps {
   disabled?: boolean;
 }
 
-export function TestInfoForm({ data, onInputChange, disabled }: TestInfoFormProps) {
+export function TestInfoForm({
+  data,
+  onInputChange,
+  disabled,
+}: TestInfoFormProps) {
   /**
    * Hàm chuyển từ DD/MM/YYYY -> YYYY-MM-DD để hiển thị input type=date
    */
   const getIsoDate = () => {
-  if (!data.exam_date) return ""; // Nếu undefined => ""
-  // Nếu đã có dấu "/" => DD/MM/YYYY
-  if (data.exam_date.includes("/")) {
-    const parts = data.exam_date.split("/");
-    if (parts.length !== 3) return "";
-    const [day, month, year] = parts;
-    return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
-  }
-  // Nếu đã là YYYY-MM-DD
-  if (data.exam_date.includes("-")) return data.exam_date;
-  return "";
-};
+    if (!data.exam_date) return ""; // Nếu undefined => ""
+    // Nếu đã có dấu "/" => DD/MM/YYYY
+    if (data.exam_date.includes("/")) {
+      const parts = data.exam_date.split("/");
+      if (parts.length !== 3) return "";
+      const [day, month, year] = parts;
+      return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
+    }
+    // Nếu đã là YYYY-MM-DD
+    if (data.exam_date.includes("-")) return data.exam_date;
+    return "";
+  };
 
   return (
     <div className="space-y-4 bg-background text-foreground p-4 rounded-lg border border-gray-200">
@@ -65,9 +69,10 @@ export function TestInfoForm({ data, onInputChange, disabled }: TestInfoFormProp
         <label className="flex items-center gap-2 font-medium mb-1 text-foreground">
           <CalendarDays className="h-4 w-4 text-green-500" /> Exam date
         </label>
-       <input
+        <input
           type="date"
-          value={getIsoDate()} // Luôn hợp lệ
+          aria-label="Exam Date"
+          value={getIsoDate()}
           onChange={(e) => {
             const [y, m, d] = e.target.value.split("-");
             onInputChange("exam_date", `${d}/${m}/${y}`);
