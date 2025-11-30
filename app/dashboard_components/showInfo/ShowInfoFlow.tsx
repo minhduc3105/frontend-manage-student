@@ -15,12 +15,7 @@ import { Schedule, deleteSchedule } from "../../../src/services/api/schedule";
 {
   /*test*/
 }
-import {
-  Test,
-  getTests,
-  deleteTest,
-  updateTest,
-} from "../../../src/services/api/test";
+import { Test, getTests, deleteTest } from "../../../src/services/api/test";
 
 import { ShowInfoModal, ModalDataType } from "./ShowInfoModal";
 
