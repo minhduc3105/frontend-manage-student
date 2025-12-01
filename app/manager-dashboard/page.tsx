@@ -354,8 +354,7 @@ export default function ManagerDashboard() {
         </div>
 
         {/* MAIN CONTENT */}
-        {/* 🎨 SỬA: Thêm ml-64 để dành chỗ cho sidebar fixed */}
-        <div className="ml-64 flex-1 p-8 overflow-y-auto">
+        <div className="left-64 flex-1 p-8 overflow-y-auto">
           <div className={activeSection === "dashboard" ? "block" : "hidden"}>
             <DashboardContent />
           </div>
@@ -549,7 +548,7 @@ function ModalWrapper({ children, onClose }: any) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[9999] flex items-center justify-center"
+      className="fixed inset-0 z-[9999] flex items-center justify-center left-64"
     >
       <motion.button
         aria-label="close"

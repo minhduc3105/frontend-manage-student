@@ -148,7 +148,7 @@ export default function TeacherDashboard() {
         />
 
         {/* Main content */}
-        <div className="ml-64 flex-1 p-8 overflow-y-auto">
+        <div className="left-64 flex-1 p-8 overflow-y-auto">
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-2xl font-bold">Teacher Dashboard</h1>
             <div className="flex items-center gap-3">
@@ -262,7 +262,7 @@ export default function TeacherDashboard() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.18 }}
-                className="fixed inset-0 z-[9999] flex items-center justify-center"
+                className="fixed inset-0 z-[9999] flex items-center justify-center left-64"
               >
                 <motion.button
                   onClick={() => setShowReportModal(false)}

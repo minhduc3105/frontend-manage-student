@@ -91,7 +91,7 @@ export default function ParentDashboardPage() {
         />
 
         {/* Main */}
-        <main className="ml-64 flex-1 p-8 overflow-y-auto">
+        <main className="left-64 flex-1 p-8 overflow-y-auto">
           <div className="flex items-center justify-between mb-8">
             <div>
               {/* 🎨 SỬA: text-gray-900 -> text-foreground */}
@@ -193,7 +193,7 @@ export default function ParentDashboardPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.18 }}
-              className="fixed inset-0 z-[9999] flex items-center justify-center"
+              className="fixed inset-0 z-[9999] flex items-center justify-center left-64"
             >
               {/* backdrop */}
               <motion.button
@@ -203,7 +203,6 @@ export default function ParentDashboardPage() {
                 animate={{ opacity: 0.45 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.18 }}
-                // 🎨 SỬA: bg-black -> bg-black/45 để chuẩn theme
                 className="absolute inset-0 bg-black/45"
                 style={{ WebkitTapHighlightColor: "transparent" }}
               />
