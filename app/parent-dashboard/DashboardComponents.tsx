@@ -184,8 +184,9 @@ export function Sidebar({
   const { resolvedTheme, setTheme } = useTheme();
 
   return (
-    <aside className="fixed top-0 left-0 w-64 h-screen bg-background shadow-lg p-4 flex flex-col justify-between border-r border-gray-200">
-      <div>
+    <aside className="fixed top-0 left-0 w-64 h-screen bg-background shadow-lg p-4 flex flex-col border-r border-gray-200">
+      {/* Scrollable Content */}
+      <div className="flex-1 overflow-y-auto">
         <div className="flex items-center gap-3 font-bold text-xl text-blue-600 mb-6">
           <BookOpen className="h-8 w-8" />
           <span className="tracking-wide">Parent Management</span>
@@ -246,7 +247,7 @@ export function Sidebar({
         </nav>
       </div>
 
-      {/* ⚡ FOOTER: Theme Toggle + Logout */}
+      {/* ⚡ FOOTER: Theme Toggle + Logout - Dính xuống dưới */}
       <div className="border-t border-gray-200 pt-4 space-y-2">
         {/* Theme Toggle Button */}
         {mounted && (

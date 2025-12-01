@@ -155,7 +155,7 @@ export function Sidebar({
   mounted,
 }: SidebarProps) {
   return (
-    <aside className="fixed top-0 left-0 w-64 h-screen bg-background shadow-lg p-4 flex flex-col justify-between border-r border-gray-200">
+    <aside className="w-64 bg-background shadow-lg p-4 flex flex-col justify-between border-r border-gray-200">
       <div>
         <div className="flex items-center gap-3 font-bold text-xl text-blue-600 mb-6">
           <BookOpen className="h-8 w-8" />
