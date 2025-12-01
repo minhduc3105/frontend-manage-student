@@ -91,7 +91,7 @@ export default function ParentDashboardPage() {
         />
 
         {/* Main */}
-        <main className="left-64 flex-1 p-8 overflow-y-auto">
+        <main className="ml-64 flex-1 p-8 overflow-y-auto">
           <div className="flex items-center justify-between mb-8">
             <div>
               {/* 🎨 SỬA: text-gray-900 -> text-foreground */}
